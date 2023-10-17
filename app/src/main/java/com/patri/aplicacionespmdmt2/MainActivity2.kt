@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.patri.aplicacionespmdmt2.BoardgamesApp.BoardGameActivity
 import com.patri.aplicacionespmdmt2.HelloApp.MainActivity
 import com.patri.aplicacionespmdmt2.IMCApp.IMCcalculator
 import com.patri.aplicacionespmdmt2.Message.MessageSending
@@ -25,6 +26,9 @@ class MainActivity2 : AppCompatActivity() {
 
         var btnIMCApp = findViewById<Button>(R.id.btnIMC)
         btnIMCApp.setOnClickListener{ navigateToIMCApp() }
+
+        var btnBoardgameApp = findViewById<Button>(R.id.btnBoardgame)
+        btnBoardgameApp.setOnClickListener{ navigateToBoardgameApp() }
     }
 
     //Fuera de la función onCreate()
@@ -41,6 +45,11 @@ class MainActivity2 : AppCompatActivity() {
 
     private fun navigateToIMCApp(){
         var intent = Intent (this,IMCcalculator::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToBoardgameApp(){
+        var intent = Intent (this,BoardGameActivity::class.java)
         startActivity(intent)
     }
 }
