@@ -51,4 +51,5 @@
         android:contentDescription="Añade un juego"
         app:backgroundTint="@color/background_button"
         app:tint="@color/white"/>
+
 </FrameLayout>

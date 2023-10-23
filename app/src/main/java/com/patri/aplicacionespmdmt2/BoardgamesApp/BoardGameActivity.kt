@@ -59,4 +59,15 @@ class BoardGameActivity : AppCompatActivity() {
         cbGame.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbGame.context, color))
     }
 
+    private val games = mutablelistOf(
+        Game("Frostpunk",Cooperative)
+                Game("Hero Realm",Deckbuilding)
+    Game("Agricola",Euro)
+    Game("Arkham Horror",LGC)
+    Game("Gloomhaven",Legacy)
+    )
+
+    private lateinit var rvCategories: RecyclerView
+
+
 }
