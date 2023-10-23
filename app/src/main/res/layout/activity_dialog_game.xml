@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/black"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/etGame"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/dialog_add_game"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+        <RadioGroup
+            android:id="@+id/rgCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbCooperative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/bgapp_cooperative_category"
+            android:checked="true"
+            android:text="@string/dialog_cooperative_category"
+            android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnAddGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_newgame_button"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/bgapp_accent"/>
+
+
+
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
