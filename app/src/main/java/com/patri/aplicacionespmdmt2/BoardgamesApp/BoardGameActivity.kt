@@ -1,10 +1,13 @@
 package com.patri.aplicacionespmdmt2.BoardgamesApp
 
 import android.app.Dialog
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RadioButton
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.patri.aplicacionespmdmt2.R
 
@@ -16,8 +19,6 @@ class BoardGameActivity : AppCompatActivity() {
 
     private lateinit var categoriesAdapter: CategoriesAdapter
     private lateinit var gamesAdapter: GamesAdapter
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,6 +97,17 @@ class BoardGameActivity : AppCompatActivity() {
         games[position].isSelected = !games[position].isSelected
         updateGames()
     }
+
+    private fun initUI(){
+        categoriesAdapter = CategoriesAdapter(categories)
+        rvCategories.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rvCategories.adapter = categoriesAdapter
+
+        gamesAdapter = GamesAdapter(games) {position -> onGameSelected(position)}
+        rvGames.layoutManager = LinearLayoutManager(this)
+        rvGames.adapter = gamesAdapter
+    }
+
 
 
 
