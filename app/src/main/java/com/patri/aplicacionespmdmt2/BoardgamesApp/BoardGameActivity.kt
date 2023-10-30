@@ -65,38 +65,22 @@ class BoardGameActivity : AppCompatActivity() {
     }
 
     private fun updateGames() {
-        gamesAdapter.notifyDataSetChanged()
+
+        val selectedCategories: List<GameCategory> = categories.filter { it.isSelected }
+        /** Aplica un filtro que es cuales de ellas están seleccionadas .isSelected
+         * */
+        val newGames = games.filter { selectedCategories.contains(it.category) }
+
+        gamesAdapter.games = newGames
+        gamesAdapter.notifyDataSetChanged() /**Notificamos que ha cambiado*/
     }
 
-
-    fun render(game: Game) {
-        tvGame.text = game.name
-
-        val color = when(game.category){
-            GameCategory.Cooperative -> R.color.bgapp_cooperative_category
-            GameCategory.Deckbuilding -> R.color.bgapp_deckbuilding_category
-            GameCategory.Euro -> R.color.bgapp_euro_category
-            GameCategory.LCG -> R.color.bgapp_lcg_category
-            GameCategory.Legacy -> R.color.bgapp_legacy_category
-        }
-
-        cbGame.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(cbGame.context, color))
-    }
-
-    private val games = mutablelistOf(
-        Game("Frostpunk",Cooperative)
-                Game("Hero Realm",Deckbuilding)
-    Game("Agricola",Euro)
-    Game("Arkham Horror",LGC)
-    Game("Gloomhaven",Legacy)
-    )
-
-    private lateinit var rvCategories: RecyclerView
 
     private fun onGameSelected(position:Int){
         games[position].isSelected = !games[position].isSelected
         updateGames()
     }
+
 
     private fun initUI(){
         categoriesAdapter = CategoriesAdapter(categories)
