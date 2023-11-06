@@ -133,7 +133,6 @@
                 app:thumbColor="@color/background_fab" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <!--_________________________________________________________________________-->
     <!--Bloque de Peso y edad-->
     <androidx.cardview.widget.CardView

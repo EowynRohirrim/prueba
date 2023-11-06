@@ -4,10 +4,13 @@
     android:layout_height="match_parent">
 
     <!--Hay que hacer 5 barras-->
+    <!--Solo se hace la plantilla de una para pasarle-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_fab"
+
+
         >
 
     </androidx.cardview.widget.CardView>

@@ -23,7 +23,6 @@
     app:layout_constraintBottom_toTopOf="@id/H1"
     />
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/H1"
         android:layout_width="match_parent"

@@ -15,6 +15,7 @@ class ColorsActivity : AppCompatActivity {
 
 
 
+
     )
     private lateinit var rvColorsH: RecyclerView
 

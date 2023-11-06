@@ -75,4 +75,5 @@
                 android:backgroundTint="@color/bgapp_accent"/>
         </RadioGroup>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
