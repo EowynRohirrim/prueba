@@ -14,8 +14,6 @@ class ColorsActivity : AppCompatActivity {
         VerticalBar(-85871793,"V5, ()"),
 
 
-
-
     )
     private lateinit var rvColorsH: RecyclerView
 

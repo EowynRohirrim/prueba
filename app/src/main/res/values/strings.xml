@@ -72,6 +72,26 @@
     <string name="dialog_add_game">Añade un juego</string>
     <string name="dialog_newgame_button">Nuevo Juego</string>
     <string name="dialog_deckbuilding_category">Deckbuilding</string>
+    <string name="dialog_BarH1">H1 (20%)</string>
+    <string name="dialog_BarH2">H2 (50%)</string>
+    <string name="dialog_BarH3">H3 (80%)</string>
+    <string name="dialog_BarV1">V1 (20%)</string>
+    <string name="dialog_BarV2">V2 (35%)</string>
+    <string name="dialog_BarV3">V3(50%)</string>
+    <string name="dialog_BarV4">V4 (65%)</string>
+    <string name="dialog_BarV5">V5 (80%)</string>
+    <string name="dialog_color_white">Blanco</string>
+    <string name="dialog_color_Red">Rojo</string>
+    <string name="dialog_color_orange">Naranja</string>
+    <string name="dialog_color_yellow">Amarillo</string>
+    <string name="dialog_color_green">Verde</string>
+    <string name="dialog_color_cyan">Cian</string>
+    <string name="dialog_color_blue">Azul</string>
+    <string name="dialog_color_violet">Violeta</string>
+    <string name="dialog_color_black">Negro</string>
+    <string name="dialog_choose_color">Elige un color</string>
+    <string name="dialog_choose_bar">Elige una barra</string>
+    <string name="dialog_applyColor_button">Aplicar Color</string>
 
 
 </resources>
