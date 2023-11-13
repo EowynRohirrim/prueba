@@ -1,6 +1,9 @@
 package com.patri.aplicacionespmdmt2.ColorsApp
 
+import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
+import com.patri.aplicacionespmdmt2.R
+
 /**
 El adapter coge la lista, cuenta los objetos, coge el layout de los objetos y se los pasa al View Holder, como litas
 por posiciones y
@@ -17,5 +20,21 @@ class HorizontalAdapter (private val verticalBar:List<VerticalBar>):RecyclerView
      *
      * )
      * */
+
+    override fun onCreateViewHolder(parent: VerticalBar, viewType: Int): HorizontalViewHolder{
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_vertical_bar, parent, false)
+        return HorizontalViewHolder(view)
+
+    }
+    override fun onBindViewHolder(holder: HorizontalViewHolder, position: Int) {
+        holder.pintarViews(ejemplos[position])
+
+    }
+
+    override fun getItemCount(): Int {
+        return ejemplos.size
+    }
+
+
 
 }

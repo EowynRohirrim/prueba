@@ -1,10 +1,16 @@
 package com.patri.aplicacionespmdmt2.ColorsApp
 
+import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.patri.aplicacionespmdmt2.R
 
-class ColorsActivity : AppCompatActivity {
+class ColorsActivity : AppCompatActivity() {
+
+    private lateinit var rvColorsH :RecyclerView
+    private lateinit var rvAdapter: Adapter
 
     private val verticalBars = mutableListOf(
         VerticalBar(871890688,"V1 (20%)"),
@@ -25,6 +31,18 @@ class ColorsActivity : AppCompatActivity {
         horizontalAdapter = HorizontalAdapter(verticalBars)
 
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_recycler_view)
+        rvEjemplo = findViewById(R.id.rvEjemplo)
+        rvAdapter = EjemploAdapter(listaEjemplo)
+
+        rvEjemplo.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        rvEjemplo.adapter = rvAdapter
+
+    }
+
 
 
 }

@@ -17,4 +17,12 @@ class HorizontalViewHolder (view:View):RecyclerView.ViewHolder(view){
         cvVerticalBar.setCardBackgroundColor(verticalBar.colorSelected)
 
     }
+
+    fun pintarViews(item: TextoEjemplo){
+        tvVerticalBar.text = item.texto
+        tvVerticalBar.setTextColor(item.colorTexto)
+    }
+
+
+
 }
